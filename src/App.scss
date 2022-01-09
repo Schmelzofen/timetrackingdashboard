@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* 
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+- Blue: hsl(246, 80%, 60%)
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+### Neutral
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Rubik;
+}
+
+.App {
+  background: #0d1323;
+  padding: 22% 0 22% 0;
+
+  section {
+    &:nth-of-type(2) {
+      >div {
+
+        &:nth-of-type(1) {
+          background: url("./img/icon-work.svg") no-repeat, #ff8b64;
+          background-position: right 15px top -10px;
+        }
+
+        &:nth-of-type(2) {
+          background: url("./img/icon-play.svg") top right no-repeat, #56c2e6;
+          background-position: right 15px top -10px;
+        }
+
+        &:nth-of-type(3) {
+          background: url("./img/icon-study.svg") top right no-repeat, #ff5e7d;
+          background-position: right 15px top -10px;
+        }
+
+        &:nth-of-type(4) {
+          background: url("./img/icon-exercise.svg") top right no-repeat, #4bcf83;
+          background-position: right 15px top -10px;
+        }
+
+        &:nth-of-type(5) {
+          background: url("./img/icon-social.svg") top right no-repeat, #7235d1;
+          background-position: right 15px top -10px;
+        }
+
+        &:nth-of-type(6) {
+          background: url("./img/icon-self-care.svg") top right no-repeat, #f1c75b;
+          background-position: right 15px top -10px;
+        }
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 7%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5746ea;
+  border-radius: 15px;
+  padding: 6% 0;
+
+  div {
+    margin-right: 18px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    img {
+      width: 70px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    &:nth-of-type(2) {
+      padding: 0 10px 0 0px;
+    }
+  }
+}
+
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+  margin: -5px 23px 5px 23px;
+  align-items: center;
+}
+
+.flex-sb2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: space-evenly;
+
+  .link {
+    text-decoration: none;
+    color: #8383c1;
+    padding: 7% 0;
+    font-size: 2.5vh;
+  }
+}
+
+.mainContainer {
+  margin: 0% 6.5%;
+  background: #1d204b;
+  border-radius: 15px;
+}
+
+.gridContainer {
+  background: red;
+  margin: 7% 0 0 0;
+  padding: 12% 0 11.5% 0;
+  border-radius: 15px;
+
+  article {
+    background: yellow;
+    padding: 10% 0;
+    margin: 0% -.3% -12.5% -.3%;
+    border-radius: 15px;
+    background: #1d204b;
+  }
+}
+
+p:nth-of-type(1) {
+  color: #aaa3ff;
+}
+
+p:nth-of-type(2) {
+  color: #faf8ff;
+  font-size: 3vh;
+}
+
+.title {
+  color: #fbffff;
+  font-size: 2.5vh;
+}
+
+.ellipsis {
+  height: 5px;
+  width: 20px;
+}
+
+.hours {
+  color: #fbffff;
+  font-size: 4vh;
+}
+
+.timeframe {
+  color: #c2c5f8;
+}
+
+@media only screen and (min-width: 1440px) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 12% 0 10% 0;
+  }
+
+  .flex {
+    height: 380px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mainContainer {
+    margin: 5% -12% 10% 40%;
+  }
+
+  .linkContainer {
+    height: 200px;
+    flex-direction: column;
+    margin: 0 0 0 10%;
+
+    .link {
+      font-size: 3vh;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+  }
+
+  .gridContainer {
+    width: 273px;
+    padding: 18% 0 0 0;
+
+    article {
+      height: 250px;
+      width: 275px;
+    }
+  }
+}
